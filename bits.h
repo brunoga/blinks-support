@@ -3,12 +3,8 @@
 
 #include <blinklib.h>
 
-namespace support {
-
-void SetBit(byte *b, byte n);
-void UnsetBit(byte *b, byte n);
-bool IsBitSet(byte b, byte n);
-
-}  // namespace support
+#define SET_BIT(b, n) (b |= (1 << n))
+#define UNSET_BIT(b, n) (b &= ~(1 << n))
+#define IS_BIT_SET(b, n) (b & (1 << n))
 
 #endif
