@@ -5,7 +5,7 @@ extern void *__brkval;
 
 namespace support {
 
-int get_free_memory() {
+int FreeMemory() {
   int free_memory;
 
   if ((int)__brkval == 0)
